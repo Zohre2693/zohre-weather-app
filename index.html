@@ -10,6 +10,7 @@
       integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
       crossorigin="anonymous"
     />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>Document</title>
   </head>
@@ -17,10 +18,10 @@
     <div class="container">
       <div class="weather-app-wrapper">
         <div class="weather-app">
-          <h1>New York</h1>
+          <h1 id="city"></h1>
           <ul>
-            <li>Friday 05:00</li>
-            <li>clear</li>
+            <li>Last Update:<span id="date"></span></li>
+            <li id="description"></li>
           </ul>
           <div class="row">
             <div class="col-6">
@@ -29,15 +30,14 @@
                   src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
                   alt="clear"
                 />
-                <span class="temperature">12</span>
+                <span class="temperature" id="temperature"></span>
                 <span class="degree">°C|<a href="#">°F</a></span>
               </div>
             </div>
             <div class="col-6">
               <ul>
-                <li>precipitation: 0%</li>
-                <li>Humidity:73%</li>
-                <li>Wind:2 km/h</li>
+                <li>Humidity:<span id="humidity"></span>%</li>
+                <li>Wind:<span id="wind"></span> km/h</li>
               </ul>
             </div>
           </div>
@@ -52,5 +52,6 @@
         >
       </div>
     </div>
+    <script src="src/index.js"></script>
   </body>
 </html>
